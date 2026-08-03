@@ -16,7 +16,7 @@ export const GET = async () => {
 
 export const POST = async (req: Request) => {
   if (!isAdmin()) {
-    return new NextResponse("Unauthorized", { status: 401 });
+    return new NextResponse("Unauthorized", { status: 401 })
   }
 
   const body = await req.json();

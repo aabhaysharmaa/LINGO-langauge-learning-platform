@@ -6,7 +6,7 @@ import { challengeOptions } from "@/db/schema";
 
 export const GET = async () => {
   if (!isAdmin()) {
-    return new NextResponse("Unauthorized", { status: 401 });
+    return new NextResponse("Unauthorized", { status: 401 })
   }
 
   const data = await db.query.challengeOptions.findMany();

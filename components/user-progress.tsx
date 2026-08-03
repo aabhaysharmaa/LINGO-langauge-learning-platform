@@ -3,7 +3,7 @@ import Image from "next/image";
 import { InfinityIcon } from "lucide-react";
 
 import { courses } from "@/db/schema";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 type Props = {
   activeCourse: typeof courses.$inferSelect;
@@ -12,10 +12,10 @@ type Props = {
   hasActiveSubscription: boolean;
 };
 
-export const UserProgress = ({ 
-  activeCourse, 
-  points, 
-  hearts, 
+export const UserProgress = ({
+  activeCourse,
+  points,
+  hearts,
   hasActiveSubscription
 }: Props) => {
   return (
@@ -40,8 +40,8 @@ export const UserProgress = ({
       <Link href="/shop">
         <Button variant="ghost" className="text-rose-500">
           <Image src="/heart.svg" height={22} width={22} alt="Hearts" className="mr-2" />
-          {hasActiveSubscription 
-            ? <InfinityIcon className="h-4 w-4 stroke-[3]" /> 
+          {hasActiveSubscription
+            ? <InfinityIcon className="h-4 w-4 stroke-[3]" />
             : hearts
           }
         </Button>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 type Props = {
   title: string;
-  description: string;
+  description: string
 };
 
 export const UnitBanner = ({

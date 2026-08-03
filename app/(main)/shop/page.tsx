@@ -12,7 +12,7 @@ import { Quests } from "@/components/quests";
 
 const ShopPage = async () => {
   const userProgressData = getUserProgress();
-  const userSubscriptionData = getUserSubscription();
+  const userSubscriptionData = getUserSubscription()
 
   const [
     userProgress,
@@ -28,7 +28,7 @@ const ShopPage = async () => {
 
   const isPro = !!userSubscription?.isActive;
 
-  return ( 
+  return (
     <div className="flex flex-row-reverse gap-[48px] px-6">
       <StickyWrapper>
         <UserProgress
@@ -66,5 +66,5 @@ const ShopPage = async () => {
     </div>
   );
 };
- 
+
 export default ShopPage;

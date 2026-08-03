@@ -10,7 +10,7 @@ export const GET = async (
   { params }: { params: { unitId: number } },
 ) => {
   if (!isAdmin()) {
-    return new NextResponse("Unauthorized", { status: 403 });
+    return new NextResponse("Unauthorized", { status: 403 })
   }
 
   const data = await db.query.units.findFirst({

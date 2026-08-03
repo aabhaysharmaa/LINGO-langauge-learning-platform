@@ -6,21 +6,21 @@ import { FeedWrapper } from "@/components/feed-wrapper";
 import { UserProgress } from "@/components/user-progress";
 import { StickyWrapper } from "@/components/sticky-wrapper";
 import { lessons, units as unitsSchema } from "@/db/schema";
-import { 
-  getCourseProgress, 
-  getLessonPercentage, 
-  getUnits, 
+import {
+  getCourseProgress,
+  getLessonPercentage,
+  getUnits,
   getUserProgress,
   getUserSubscription
 } from "@/db/queries";
 
 import { Unit } from "./unit";
-import { Header } from "./header";
+import { Header } from "./header"
 
 const LearnPage = async () => {
   const userProgressData = getUserProgress();
   const courseProgressData = getCourseProgress();
-  const lessonPercentageData = getLessonPercentage();
+  const lessonPercentageData = getLessonPercentage()
   const unitsData = getUnits();
   const userSubscriptionData = getUserSubscription();
 
@@ -83,5 +83,5 @@ const LearnPage = async () => {
     </div>
   );
 };
- 
+
 export default LearnPage;

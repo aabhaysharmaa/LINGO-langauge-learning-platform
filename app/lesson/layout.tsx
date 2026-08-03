@@ -1,9 +1,9 @@
 type Props = {
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 
 const LessonLayout = ({ children }: Props) => {
-  return ( 
+  return (
     <div className="flex flex-col h-full">
       <div className="flex flex-col h-full w-full">
         {children}
@@ -11,5 +11,5 @@ const LessonLayout = ({ children }: Props) => {
     </div>
   );
 };
- 
+
 export default LessonLayout;

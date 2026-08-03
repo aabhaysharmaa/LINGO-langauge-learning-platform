@@ -1,12 +1,12 @@
-import { SimpleForm, Edit, TextInput, ReferenceInput, NumberInput, required, SelectInput } from "react-admin";
+import { SimpleForm, Edit, TextInput, ReferenceInput, NumberInput, required, SelectInput } from "react-admin"
 
 export const ChallengeEdit = () => {
   return (
     <Edit>
       <SimpleForm>
-        <TextInput 
-          source="question" 
-          validate={[required()]} 
+        <TextInput
+          source="question"
+          validate={[required()]}
           label="Question"
         />
         <SelectInput
@@ -21,7 +21,7 @@ export const ChallengeEdit = () => {
               name: "ASSIST",
             }
           ]}
-          validate={[required()]} 
+          validate={[required()]}
         />
         <ReferenceInput
           source="lessonId"

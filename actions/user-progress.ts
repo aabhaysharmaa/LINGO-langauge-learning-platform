@@ -3,7 +3,7 @@
 import { and, eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { auth, currentUser } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs"
 
 import db from "@/db/drizzle";
 import { POINTS_TO_REFILL } from "@/constants";
@@ -84,7 +84,7 @@ export const reduceHearts = async (challengeId: number) => {
   const isPractice = !!existingChallengeProgress;
 
   if (isPractice) {
-    return { error: "practice" }; 
+    return { error: "practice" };
   }
 
   if (!currentUserProgress) {

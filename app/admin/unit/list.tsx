@@ -1,4 +1,4 @@
-import { Datagrid, List, TextField, ReferenceField } from "react-admin";
+import { Datagrid, List, TextField, ReferenceField } from "react-admin"
 
 export const UnitList = () => {
   return (

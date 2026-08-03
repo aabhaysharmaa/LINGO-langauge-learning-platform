@@ -22,12 +22,12 @@ const QuestsPage = async () => {
   ]);
 
   if (!userProgress || !userProgress.activeCourse) {
-    redirect("/courses");
+    redirect("/courses")
   }
 
   const isPro = !!userSubscription?.isActive;
 
-  return ( 
+  return (
     <div className="flex flex-row-reverse gap-[48px] px-6">
       <StickyWrapper>
         <UserProgress
@@ -84,5 +84,5 @@ const QuestsPage = async () => {
     </div>
   );
 };
- 
+
 export default QuestsPage;

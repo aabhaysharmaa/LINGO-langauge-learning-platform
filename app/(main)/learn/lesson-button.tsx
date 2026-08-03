@@ -27,7 +27,7 @@ export const LessonButton = ({
   percentage
 }: Props) => {
   const cycleLength = 8;
-  const cycleIndex = index % cycleLength;
+  const cycleIndex = index % cycleLength
 
   let indentationLevel;
 
@@ -52,9 +52,9 @@ export const LessonButton = ({
   const href = isCompleted ? `/lesson/${id}` : "/lesson";
 
   return (
-    <Link 
-      href={href} 
-      aria-disabled={locked} 
+    <Link
+      href={href}
+      aria-disabled={locked}
       style={{ pointerEvents: locked ? "none" : "auto" }}
     >
       <div

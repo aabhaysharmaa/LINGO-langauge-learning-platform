@@ -3,17 +3,17 @@ import { eq } from "drizzle-orm";
 import { auth } from "@clerk/nextjs";
 
 import db from "@/db/drizzle";
-import { 
+import {
   challengeProgress,
-  courses, 
-  lessons, 
-  units, 
+  courses,
+  lessons,
+  units,
   userProgress,
   userSubscription
 } from "@/db/schema";
 
 export const getUserProgress = cache(async () => {
-  const { userId } = await auth();
+  const { userId } = await auth()
 
   if (!userId) {
     return null;
@@ -139,8 +139,8 @@ export const getCourseProgress = cache(async () => {
     .flatMap((unit) => unit.lessons)
     .find((lesson) => {
       return lesson.challenges.some((challenge) => {
-        return !challenge.challengeProgress 
-          || challenge.challengeProgress.length === 0 
+        return !challenge.challengeProgress
+          || challenge.challengeProgress.length === 0
           || challenge.challengeProgress.some((progress) => progress.completed === false)
       });
     });
@@ -186,7 +186,7 @@ export const getLesson = cache(async (id?: number) => {
   }
 
   const normalizedChallenges = data.challenges.map((challenge) => {
-    const completed = challenge.challengeProgress 
+    const completed = challenge.challengeProgress
       && challenge.challengeProgress.length > 0
       && challenge.challengeProgress.every((progress) => progress.completed)
 
@@ -230,7 +230,7 @@ export const getUserSubscription = cache(async () => {
 
   if (!data) return null;
 
-  const isActive = 
+  const isActive =
     data.stripePriceId &&
     data.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS > Date.now();
 

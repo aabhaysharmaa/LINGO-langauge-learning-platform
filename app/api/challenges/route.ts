@@ -9,7 +9,7 @@ export const GET = async () => {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const data = await db.query.challenges.findMany();
+  const data = await db.query.challenges.findMany()
 
   return NextResponse.json(data);
 };

@@ -20,7 +20,7 @@ export const Items = ({
   points,
   hasActiveSubscription,
 }: Props) => {
-  const [pending, startTransition] = useTransition();
+  const [pending, startTransition] = useTransition()
 
   const onRefillHearts = () => {
     if (pending || hearts === 5 || points < POINTS_TO_REFILL) {
@@ -48,7 +48,7 @@ export const Items = ({
   return (
     <ul className="w-full">
       <div className="flex items-center w-full p-4 gap-x-4 border-t-2">
-        <Image 
+        <Image
           src="/heart.svg"
           alt="Heart"
           height={60}
@@ -63,7 +63,7 @@ export const Items = ({
           onClick={onRefillHearts}
           disabled={
             pending
-            || hearts === 5 
+            || hearts === 5
             || points < POINTS_TO_REFILL
           }
         >

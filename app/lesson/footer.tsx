@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 type Props = {
   onCheck: () => void;
-  status: "correct" | "wrong" | "none" | "completed";
+  status: "correct" | "wrong" | "none" | "completed"
   disabled?: boolean;
   lessonId?: number;
 };

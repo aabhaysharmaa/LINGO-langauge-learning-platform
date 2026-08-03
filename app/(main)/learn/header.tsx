@@ -21,4 +21,4 @@ export const Header = ({ title }: Props) => {
       <div />
     </div>
   );
-};
+}

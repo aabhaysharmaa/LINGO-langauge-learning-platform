@@ -7,7 +7,7 @@ import { Quiz } from "./quiz";
 const LessonPage = async () => {
   const lessonData = getLesson();
   const userProgressData = getUserProgress();
-  const userSubscriptionData = getUserSubscription();
+  const userSubscriptionData = getUserSubscription()
 
   const [
     lesson,
@@ -27,7 +27,7 @@ const LessonPage = async () => {
     .filter((challenge) => challenge.completed)
     .length / lesson.challenges.length * 100;
 
-  return ( 
+  return (
     <Quiz
       initialLessonId={lesson.id}
       initialLessonChallenges={lesson.challenges}
@@ -37,5 +37,5 @@ const LessonPage = async () => {
     />
   );
 };
- 
+
 export default LessonPage;

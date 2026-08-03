@@ -7,7 +7,7 @@ type Props = {
   id: number;
   order: number;
   title: string;
-  description: string;
+  description: string
   lessons: (typeof lessons.$inferSelect & {
     completed: boolean;
   })[];

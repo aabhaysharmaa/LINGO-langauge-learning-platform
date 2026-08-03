@@ -1,22 +1,22 @@
-import { SimpleForm, Edit, TextInput, ReferenceInput, NumberInput, required } from "react-admin";
+import { SimpleForm, Edit, TextInput, ReferenceInput, NumberInput, required } from "react-admin"
 
 export const UnitEdit = () => {
   return (
     <Edit>
       <SimpleForm>
-        <NumberInput 
-          source="id" 
-          validate={[required()]} 
+        <NumberInput
+          source="id"
+          validate={[required()]}
           label="Id"
         />
-        <TextInput 
-          source="title" 
-          validate={[required()]} 
+        <TextInput
+          source="title"
+          validate={[required()]}
           label="Title"
         />
-        <TextInput 
-          source="description" 
-          validate={[required()]} 
+        <TextInput
+          source="description"
+          validate={[required()]}
           label="Description"
         />
         <ReferenceInput

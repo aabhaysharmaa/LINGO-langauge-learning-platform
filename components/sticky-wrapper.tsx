@@ -1,5 +1,5 @@
 type Props = {
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 
 export const StickyWrapper = ({ children }: Props) => {

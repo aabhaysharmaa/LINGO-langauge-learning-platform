@@ -15,7 +15,7 @@ const LessonIdPage = async ({
 }: Props) => {
   const lessonData = getLesson(params.lessonId);
   const userProgressData = getUserProgress();
-  const userSubscriptionData = getUserSubscription();
+  const userSubscriptionData = getUserSubscription()
 
   const [
     lesson,
@@ -35,7 +35,7 @@ const LessonIdPage = async ({
     .filter((challenge) => challenge.completed)
     .length / lesson.challenges.length * 100;
 
-  return ( 
+  return (
     <Quiz
       initialLessonId={lesson.id}
       initialLessonChallenges={lesson.challenges}
@@ -45,5 +45,5 @@ const LessonIdPage = async ({
     />
   );
 };
- 
+
 export default LessonIdPage;

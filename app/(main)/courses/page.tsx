@@ -27,4 +27,4 @@ const CoursesPage = async () => {
   );
 };
 
-export default CoursesPage;
+export default CoursesPage
